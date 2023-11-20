@@ -23,3 +23,7 @@ header a {
 header a:hover {
   color: rgb(159, 159, 165);
 }
+
+.active {
+  color: blue;
+}
