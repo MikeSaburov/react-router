@@ -7,12 +7,6 @@ import { Notfoundpage } from './components/Notfoundpage';
 function App() {
   return (
     <>
-      <header>
-        <Link to="/">Home</Link>
-        <Link to="/posts">Blog</Link>
-        <Link to="/about">About</Link>
-      </header>
-
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/posts" element={<Blogpage />} />
