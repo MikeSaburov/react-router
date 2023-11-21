@@ -6,7 +6,7 @@ export const Blogpage = () => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     axios({
-      url: 'https://jsonplaceholder.typicode.com/posts',
+      url: 'https://jsonplaceholder.typicode.com/posts?_limit=10',
     })
       .then((response) => {
         setPosts(response.data);
