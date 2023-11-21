@@ -5,6 +5,7 @@ import { Blogpage } from './pages/Blogpage';
 import { Notfoundpage } from './pages/Notfoundpage';
 import { Layout } from './components/Layout';
 import { Singlepage } from './pages/Singlepage';
+import { Createpost } from './pages/Createpost';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route index element={<Homepage />} />
           <Route path="posts" element={<Blogpage />} />
           <Route path="posts/:id" element={<Singlepage />} />
+          <Route path="posts/create" element={<Singlepage />} />
           <Route path="about" element={<Aboutpage />} />
           <Route path="*" element={<Notfoundpage />} />
         </Route>
