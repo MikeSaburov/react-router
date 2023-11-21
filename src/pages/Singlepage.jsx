@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 export const Singlepage = () => {
   const { id } = useParams();
   const [post, setPost] = useState(null);
   useEffect(() => {
     axios({
-      url: `https://jsonplaceholder.typicode.com/posts/${id}?_limit=50`,
+      url: `https://jsonplaceholder.typicode.com/posts/${id}`,
     })
       .then((response) => {
         setPost(response.data);
@@ -22,6 +22,7 @@ export const Singlepage = () => {
         <>
           <h1>{post.title}</h1>
           <p>{post.body}</p>
+          <Link to={`/posts/${id}/edit`}>Редактировать</Link>
         </>
       )}
     </div>

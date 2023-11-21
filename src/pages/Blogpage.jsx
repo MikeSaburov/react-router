@@ -20,11 +20,18 @@ export const Blogpage = () => {
 
   return (
     <div className="container">
-      {posts.map((post) => (
-        <Link key={post.id} to={`/posts/${post.id}`}>
-          <li>{post.title}</li>
+      <div>
+        <Link to="/posts/new">
+          <button>Создать пост</button>
         </Link>
-      ))}
+      </div>
+      <div>
+        {posts.map((post) => (
+          <Link key={post.id} to={`/posts/${post.id}`}>
+            <li>{post.title}</li>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };
