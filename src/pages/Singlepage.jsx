@@ -1,5 +1,5 @@
 import React from 'react';
 
 export const Singlepage = () => {
-  return <div>Singlepage</div>;
+  return <div>1</div>;
 };
