@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 export const Singlepage = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [post, setPost] = useState(null);
+
+  const goBack = () => navigate(-1);
   useEffect(() => {
     axios({
       url: `https://jsonplaceholder.typicode.com/posts/${id}`,
@@ -18,6 +21,7 @@ export const Singlepage = () => {
   }, [id]);
   return (
     <div>
+      <button onClick={goBack}>Назад</button>
       {post && (
         <>
           <h1>{post.title}</h1>
