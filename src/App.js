@@ -10,10 +10,11 @@ import { Editpost } from './pages/Editpost';
 import { LoginPage } from './pages/Loginpage';
 
 import { RequireAuth } from './hoc/RequireAuth';
+import { AuthProvider } from './hoc/AuthProvider';
 
 function App() {
   return (
-    <>
+    <AuthProvider>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Homepage />} />
@@ -34,7 +35,7 @@ function App() {
           <Route path="*" element={<Notfoundpage />} />
         </Route>
       </Routes>
-    </>
+    </AuthProvider>
   );
 }
 
