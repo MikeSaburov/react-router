@@ -7,6 +7,7 @@ export const Singlepage = () => {
   const [post, setPost] = useState(null);
 
   const goBack = () => navigate(-1);
+  const goHome = () => navigate('/', { replace: true });
   useEffect(() => {
     axios({
       url: `https://jsonplaceholder.typicode.com/posts/${id}`,
@@ -22,6 +23,7 @@ export const Singlepage = () => {
   return (
     <div>
       <button onClick={goBack}>Назад</button>
+      <button onClick={goHome}>Домой</button>
       {post && (
         <>
           <h1>{post.title}</h1>
