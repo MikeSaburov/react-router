@@ -23,6 +23,8 @@ export const Singlepage = () => {
   return (
     <div>
       <button onClick={goBack}>Назад</button>
+
+      {/* плохой вариант, лучше сделать через Link*/}
       <button onClick={goHome}>Домой</button>
       {post && (
         <>
