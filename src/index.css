@@ -45,3 +45,16 @@ header a:hover {
 .active {
   color: rgb(71, 71, 170);
 }
+
+button {
+  width: 100px;
+  background: rgb(36, 179, 36);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: gray;
+  padding: 5px;
+  margin-top: 10px;
+  margin-right: 5px;
+}
