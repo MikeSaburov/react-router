@@ -28,6 +28,7 @@ export const Blogpage = () => {
           <button>Создать пост</button>
         </Link>
       </div>
+      <Link to="/posts/new">Добавить пост</Link>
       <div>
         {posts.map((post) => (
           <Link key={post.id} to={`/posts/${post.id}`}>
